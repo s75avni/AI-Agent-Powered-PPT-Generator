@@ -136,7 +136,7 @@ if all(ALL_API) and user_query:
     if st.button("Click to generate:",key = "generate_ppt_button"):
       with st.spinner("Running Agent.."):
         final_prompt  = prompt_generator(model,user_query)
-        response = agent.incoke({'messages':[{'role':"user",
+        response = agent.invoke({'messages':[{'role':"user",
                                               "content":final_prompt}]})
         code = response['messages'][-1].content[-1]['text']
         st.html(code,width = "stretch",
