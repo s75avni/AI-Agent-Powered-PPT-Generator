@@ -22,11 +22,11 @@ ALL_API = [GOOGLE_API_KEY, GROQ_API_KEY, TAVILY_API_KEY]
 if not all(ALL_API):
   st.sidebar.error("PASS API-KEY")
 elif all(ALL_API):
-  # Step 1:Model Call
-model = ChatGoogleGenerativeAI(
-  model = "gemini-3.5-flash-lite",
-  google_api_key = GOOGLE_API_KEY
-)
+    # Step 1:Model Call
+  model = ChatGoogleGenerativeAI(
+    model = "gemini-3.5-flash-lite",
+    google_api_key = GOOGLE_API_KEY
+  )
   st.sidebar.info("API KEYS LOADED SUCCESSFULLY")
 elif any(ALL_API):
   st.sidebar.success("MUST PASS ALL KEYS")
