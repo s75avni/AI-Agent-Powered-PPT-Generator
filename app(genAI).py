@@ -13,9 +13,9 @@ import streamlit as st
 GOOGLE_API_KEY = st.sidebar.text_input("Google-API",type = "password")
 GROQ_API_KEY = st.sidebar.text_input("Groq-API",type = "password")
 TAVILY_API_KEY = st.sidebar.text_input("Tavily-API",type = "password")
-os.environ["GOOGLE_API_KEY"] = GOOGLE_KEY
-os.environ["GROQ_API_KEY"] = GROQ_KEY
-os.environ["TAVILY_API_KEY"] = TAVILY_KEY
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
+os.environ["TAVILY_API_KEY"] = TAVILY_API_KEY
 
 ALL_API = [GOOGLE_API_KEY, GROQ_API_KEY, TAVILY_API_KEY]
 
@@ -65,7 +65,7 @@ def generate_image(img_prompt):
     f.write(content)
 
   from PIL import Image
-  return Image.open("Image.jpeg")
+  return url
 
 # WITH TABS
 tab1, tab2, tab3 = st.tabs(["GENERATE IMAGE",
