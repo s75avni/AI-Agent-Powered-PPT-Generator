@@ -31,7 +31,7 @@ elif all(ALL_API):
 elif any(ALL_API):
   st.sidebar.success("MUST PASS ALL KEYS")
 else:
-st.info("LOADED")
+  st.info("LOADED")
   
   
 #--------------------FRONTEND---------------------------
