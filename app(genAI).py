@@ -29,7 +29,9 @@ model = ChatGoogleGenerativeAI(
 )
   st.sidebar.info("API KEYS LOADED SUCCESSFULLY")
 elif any(ALL_API):
-  st.sidebar.success("API KEYS LOADED SUCCESSFULLY")
+  st.sidebar.success("MUST PASS ALL KEYS")
+else:
+st.info("LOADED")
   
   
 #--------------------FRONTEND---------------------------
